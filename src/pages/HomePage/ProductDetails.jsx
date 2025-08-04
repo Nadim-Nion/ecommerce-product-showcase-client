@@ -8,6 +8,7 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
 
   const { addToCart } = useCart();
+  console.log("addToCart in ProductDetails:", addToCart.length);
 
   useEffect(() => {
     axios

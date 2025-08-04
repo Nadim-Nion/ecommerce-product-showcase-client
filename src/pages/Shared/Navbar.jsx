@@ -1,4 +1,6 @@
 import { Link } from "react-router";
+import { FaCartArrowDown } from "react-icons/fa";
+import { useCart } from "../../hook/useCart";
 
 const Navbar = () => {
   const navItems = (
@@ -14,6 +16,9 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const { cartItems } = useCart();
+  console.log("addToCart:", cartItems.length);
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -49,8 +54,15 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-lg menu-horizontal px-1">{navItems}</ul>
       </div>
-      <div className="navbar-end">
-        <button className="btn btn-dash btn-primary">Add to Cart</button>
+      <div className="navbar-end relative mr-4">
+        <div className="relative">
+          <FaCartArrowDown className="text-3xl text-gray-700 hover:text-blue-600 cursor-pointer" />
+          {cartItems.length > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center shadow-md animate-bounce">
+              {cartItems.length}
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );
