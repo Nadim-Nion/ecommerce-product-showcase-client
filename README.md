@@ -6,7 +6,7 @@ A modern, responsive e-commerce frontend application built with **React**, **Tai
 
 ## 🚀 Live Demo
 
-👉 [Netlify](https://your-deployment-url.com)
+👉 [Netlify](https://e-commerce-product-showcase.netlify.app/)
 
 ---
 
