@@ -1,10 +1,13 @@
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useCart } from "../../hook/useCart";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
+
+  const { addToCart } = useCart();
 
   useEffect(() => {
     axios
@@ -52,9 +55,14 @@ const ProductDetails = () => {
               ({product.rating?.count} reviews)
             </span>
           </div>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded">
-            Add to Cart
-          </button>
+          <Link to={"/checkout"}>
+            <button
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded"
+              onClick={() => addToCart(product)}
+            >
+              Add to Cart
+            </button>
+          </Link>
         </div>
       </div>
     </div>

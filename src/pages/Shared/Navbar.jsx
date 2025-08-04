@@ -1,8 +1,10 @@
+import { Link } from "react-router";
+
 const Navbar = () => {
   const navItems = (
     <>
       <li>
-        <a>Home</a>
+        <Link to={"/"}>Home</Link>
       </li>
       <li>
         <a>Product</a>
