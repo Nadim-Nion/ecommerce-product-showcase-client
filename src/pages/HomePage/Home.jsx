@@ -4,13 +4,29 @@ import { Link } from "react-router";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
-      .then((res) => setProducts(res.data))
+      .then((res) => {
+        setProducts(res.data);
+        setIsLoading(false);
+      })
       .catch((err) => console.error("Error fetching products:", err));
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen gap-2">
+        <span className="loading loading-ball loading-xs"></span>
+        <span className="loading loading-ball loading-sm"></span>
+        <span className="loading loading-ball loading-md"></span>
+        <span className="loading loading-ball loading-lg"></span>
+        <span className="loading loading-ball loading-xl"></span>
+      </div>
+    );
+  }
 
   return (
     <div className="p-4">

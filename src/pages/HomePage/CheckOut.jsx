@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useCart } from "../../hook/useCart";
+import { Link } from "react-router";
 
 const CheckOut = () => {
   const { cartItems, placeOrder, clearCart } = useCart();

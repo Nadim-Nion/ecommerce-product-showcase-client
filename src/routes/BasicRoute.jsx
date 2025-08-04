@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/HomePage/Home";
 import ProductDetails from "../pages/HomePage/ProductDetails";
 import CheckOut from "../pages/HomePage/CheckOut";
+import Orders from "../pages/HomePage/Orders";
 
 const BasicRoute = () => {
   return (
@@ -13,6 +14,7 @@ const BasicRoute = () => {
           <Route index element={<Home />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/orders" element={<Orders />} />
         </Route>
       </Routes>
     </div>

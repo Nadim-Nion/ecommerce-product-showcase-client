@@ -9,10 +9,10 @@ const Navbar = () => {
         <Link to={"/"}>Home</Link>
       </li>
       <li>
-        <a>Product</a>
+        <Link to={"/"}>Product</Link>
       </li>
       <li>
-        <a>Order</a>
+        <Link to={"/orders"}>Orders</Link>
       </li>
     </>
   );
@@ -49,7 +49,7 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="btn btn-ghost text-xl">VibeCart</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-lg menu-horizontal px-1">{navItems}</ul>
