@@ -1,6 +1,6 @@
 # 🛍️ E-commerce Product Showcase (Frontend)
 
-A modern, responsive e-commerce frontend application built with **React**, **Tailwind CSS**, and **Context API**. This app fetches product data from [FakeStoreAPI](https://fakestoreapi.com/) and allows users to browse, view product details, add to cart, and place orders.
+A modern, responsive e-commerce frontend application built with **React**, **Tailwind CSS**, and **Context API**. This app fetches product data from [FakeStoreAPI](https://fakestoreapi.com/products) and allows users to browse, view product details, add to cart, and place orders.
 
 ---
 
